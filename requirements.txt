@@ -1,0 +1,4 @@
+-e .        #this will trigger the setup.py file whenever i'll be trying to install the requirenments.txte .
+pandas
+numpy
+seaborn
