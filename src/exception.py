@@ -30,12 +30,12 @@ class CustomException(Exception):
     
 
 
+#this is to test if exceptions are working or not
+#if __name__=="__main__":
 
-if __name__=="__main__":
+    #try:
+        #a=1/0
 
-    try:
-        a=1/0
-
-    except Exception as e:
-        logging.error("An error occurred: {}".format(str(e)))
-        raise CustomException(e, sys)
+    #except Exception as e:
+        #logging.error("An error occurred: {}".format(str(e)))
+        #raise CustomException(e, sys)
