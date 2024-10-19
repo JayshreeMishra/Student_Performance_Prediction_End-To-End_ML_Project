@@ -35,5 +35,5 @@ logging.basicConfig(
 
 
 #this is just to test if my logger is working or not
-if __name__=="__main__":
-    logging.info("Logging has started")
+#if __name__=="__main__":
+    #logging.info("Logging has started")
