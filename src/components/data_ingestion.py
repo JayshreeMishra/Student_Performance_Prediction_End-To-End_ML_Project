@@ -66,7 +66,7 @@ if __name__=="__main__":
 '''
 
 #This is to test model trainer
-
+'''
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 from src.components.model_trainer import ModelTrainer
@@ -81,3 +81,4 @@ if __name__ == "__main__":
 
     model_trainer= ModelTrainer()
     print(model_trainer.initiate_model_trainer(train_arr, test_arr))
+'''
