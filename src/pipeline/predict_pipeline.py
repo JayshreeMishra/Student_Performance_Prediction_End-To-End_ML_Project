@@ -13,9 +13,15 @@ class PredictPipeline:
             preprocessor_path= r'artifacts\preprocessor.pkl'
             model= load_object(file_path= model_path)
             preprocessor= load_object(file_path= preprocessor_path)
+
+            #transform features using preprocessor
             data_scaler= preprocessor.transform(features)
             preds= model.predict(data_scaler)
-            return preds
+            
+            #To ensure that the predicted math score does not exceed 100
+            capped_preds= [min(pred, 100) for pred in preds]
+
+            return capped_preds
         except Exception as e:
             raise CustomException(e, sys)
 
@@ -29,6 +35,10 @@ class CustomData:
                  test_preparation_course: str,
                  reading_score: int,
                  writing_score: int):
+        
+        #Validate that input scores do not exceed 100
+        if reading_score>100 or writing_score>100:
+            raise ValueError("Reading and Writing scores must be 100 or below.")
         
         self.gender= gender
         self.race_ethnicity= race_ethnicity
