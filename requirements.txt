@@ -1,4 +1,4 @@
--e .        #this will trigger the setup.py file whenever i'll be trying to install the requirenments.txte .
+#-e .        #this will trigger the setup.py file whenever i'll be trying to install the requirenments.txt .
 asttokens==2.4.1
 blinker==1.8.2
 catboost==1.2.7
